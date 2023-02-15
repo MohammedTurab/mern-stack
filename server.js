@@ -1,5 +1,5 @@
 require('dotenv').config();
-const userLib = require("./backendd/lib/userLib")
+const userLib = require("./backendd/lib/userLib");
 const express = require('express');
 const mongoose=require("mongoose");
 
