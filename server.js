@@ -18,31 +18,24 @@ app.get('/resume', function(req, res) {
 app.get('/card', function(req, res) {
     res.sendFile(__dirname + '/card.html');
 });
-
-mongoose.set('strictQuery', true);
-mongoose.connect(process.env.MONGO_CONNECTION_STRING, {}, function(err) {
-    if (err) {
-        console.error(err);
-    } else {
-        console.log('Connected to database');
-        // TODO : donot create a user if atleast 1 user exist in the table
-        userLib.getAllUsers(function(err, usersList) {
-            if (err) {
-                console.error(err);
-            } else {
-                if (usersList.length === 0) {
-                    userLib.createFirstUser(function(err, res) {
-                        if (err) {
-                            console.error(err);
-                        } else {
-                            console.log(res);
-                        }
-                    });
-                }
-            }
-        });
-        app.listen(port, function() {
-            console.log('Server started on port ' + port);
-        });
-    }
+mongoose.set('strictQuery',true);
+mongoose.connect(process.env.MONGO_CONNECTION_STRING,{},function(err){
+	if(err){
+		console.error(err);
+	}
+	else{
+		console.log("DB connected");
+		// TODO : do not create a user 1 user exist in the table
+		userLib.createFirstUser(function(err,res){
+			if(err){
+				console.error(err);
+			}
+			else{
+				console.log(res);
+			}
+		});
+		app.listen(port,function(){
+			console.log("server started at port no 3000");
+		});
+	}
 });
