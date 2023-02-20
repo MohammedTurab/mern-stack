@@ -40,16 +40,16 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING,{},function(err){
 		// 		console.log(result);
 		// 	}
 		// });
-		// userLib.createUser({userName : "deva1" , yearOfGraduation : 2025},function(err,result){
-		// 	if(err)
-		// 	{
-		// 		console.error(err);
-		// 	}
-		// 	else{
-		// 		console.log(result);
-		// 	}
-		// });
-		// userLib.updateUser("deva", {yearOfGraduation: 2000}, function(err,result)
+		 userLib.createUser({userName : "turab6657" , yearOfGraduation : 2024},function(err,result){
+		 	if(err)
+		 	{
+				console.error(err);
+		 	}
+		 	else{
+				console.log(result);
+		 	}
+		 });
+		// userLib.updateUser("turab6657", {yearOfGraduation: 2000}, function(err,result)
 		// {
 		// 	if(err)
 		// 	{
@@ -59,7 +59,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING,{},function(err){
 		// 		console.log(result);
 		// 	}
 		// });
-		// userLib.deleteUser("deva kumar1",function(err,result)
+		// userLib.deleteUser("turab6657",function(err,result)
 		// {
 		// 	if(err){
 		// 		console.error(err);
