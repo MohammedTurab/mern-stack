@@ -13,7 +13,7 @@ module.exports.getAllUsers = async function(callback) {
 module.exports.createFirstUser = async function(callback) {
     try {
         var user = {
-            username : "deva",
+            username : "turab",
             yearOfGraduation : 2024
         };
         var newUser = new userModel(user);
@@ -57,7 +57,6 @@ module.exports.deleteUser = async function(username,callback)
         var query = {
             userName : username,
         };
-
         var result = await userModel.deleteOne(query);
         callback(null,result);
     }
